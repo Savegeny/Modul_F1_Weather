@@ -19,11 +19,8 @@ function Weather(){
     }
 
     const geo_coor = Geo_position.coords ? Geo_position.coords : coords;
-    console.log(geo_coor);
 
      useEffect(() => {
-    //axios.get(`"http://api.openweathermap.org/data/2.5/weather?q=${}&appid=2f35997f952b7aa5115b5f3b3f948196&units=metric&lang=ru"`)
-    //axios.get("http://api.openweathermap.org/data/2.5/weather?q=moscow&appid=2f35997f952b7aa5115b5f3b3f948196&units=metric&lang=ru")
     axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${geo_coor.lat}&lon=${geo_coor.lon}&appid=${APIkey}`)
     .then(res =>{console.log(res);
     setCity(res.data);
