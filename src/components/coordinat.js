@@ -8,16 +8,17 @@ function Geo_position () {
         const { coords } = position;
         setLat(coords.latitude);
         setLon(coords.longitude)
-        console.log (coords.latitude, coords.longitude);
+        console.log ('coordinaty ',coords.latitude, coords.longitude);
     });
   }else {
     /* определить местоположение не возможно */
   }
-  console.log(lat, lon);
+  console.log(coords.latitude, coords.longitude);
   return (
-      <p>Geo_pos
-        <p>{lat} {lon} </p>
-      </p>
+      coords
+      //<p>Geo_pos
+      //  <p>{coords.latitude} {coords.longitude} </p>
+      //</p>
   )
 }
 export default Geo_position;
